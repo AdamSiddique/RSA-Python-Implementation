@@ -1,8 +1,6 @@
 from math import sqrt, ceil
 
-SUPPORTED_CHAR = (
-    " 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-)
+from modules.constants import SUPPORTED_CHAR
 
 def main():
     pass
