@@ -33,3 +33,19 @@ def convert_user_input_to_number_array():
             else:
                 throw_non_supported_char_exception(letter) # TODO: add function
         return plaintext_number_array
+    
+def throw_non_supported_char_exception(non_supported_letter):
+    """
+    TODO: Write DOCSTRING
+    """
+    print(f"ERROR: '{non_supported_letter}' is not a valid letter")
+    print(f"The program only works with the following letters:")
+    for index, letter in enumerate(SUPPORTED_CHAR):
+        # Displaying " " as [SPACE]
+        if letter == " ":
+            letter = "[SPACE]"
+        # Formatting last letter with two newlines.
+        if index + 1 == len(SUPPORTED_CHAR):
+            print(letter, end="\n\n")
+        else:
+            print(letter, end=", ")
