@@ -32,6 +32,7 @@ def convert_user_input_to_number_array():
                 plaintext_number_array.append(letter_index + 2)
             else:
                 throw_non_supported_char_exception(letter) # TODO: add function
+                break
         return plaintext_number_array
     
 def throw_non_supported_char_exception(non_supported_letter):
