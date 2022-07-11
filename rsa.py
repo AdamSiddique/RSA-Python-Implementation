@@ -3,7 +3,7 @@ from math import sqrt, ceil
 from modules.constants import SUPPORTED_CHAR
 
 def main():
-    pass
+    convert_user_input_to_number_array()
 
 def convert_user_input_to_number_array():
     """
@@ -49,3 +49,6 @@ def throw_non_supported_char_exception(non_supported_letter):
             print(letter, end="\n\n")
         else:
             print(letter, end=", ")
+
+if __name__ == "__main__":
+    main()
