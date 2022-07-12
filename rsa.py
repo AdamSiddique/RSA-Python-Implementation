@@ -37,7 +37,16 @@ def convert_user_input_to_number_array():
     
 def throw_non_supported_char_exception(non_supported_letter):
     """
-    TODO: Write DOCSTRING
+    Prints error message regarding non supported characters.
+
+    This function takes the non supported character found in 
+    convert_user_input_to_number_array() and prints the character with some
+    informative text that tells the user about the supported letters.
+
+    Parameters
+    ----------
+    non_supported_letter : string
+        Non supported letter to print.
     """
     print(f"ERROR: '{non_supported_letter}' is not a valid letter")
     print(f"The program only works with the following letters:")
