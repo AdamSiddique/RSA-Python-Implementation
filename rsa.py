@@ -31,7 +31,7 @@ def convert_user_input_to_number_array():
                 # 0 and 1 cause issues in the later steps.
                 plaintext_number_array.append(letter_index + 2)
             else:
-                throw_non_supported_char_exception(letter) # TODO: add function
+                throw_non_supported_char_exception(letter)
                 break
         return plaintext_number_array
     
