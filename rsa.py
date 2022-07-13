@@ -64,6 +64,8 @@ def calculate_big_n_and_phi_big_n():
     """
     TODO: Write Docstring
     """
+    # Receive prime numbers p and q until product bigger than SUPPORTED_CHAR.
+    # TODO: Check if product needs to be bigger than SUPPORTED_CHAR + 2.
     while True:
         p, q = get_prime_numbers_p_and_q_from_user()
         big_n = p * q
