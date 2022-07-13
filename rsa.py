@@ -60,5 +60,50 @@ def throw_non_supported_char_exception(non_supported_letter):
         else:
             print(letter, end=", ")
 
+def calculate_big_n_and_phi_big_n():
+    """
+    TODO: Write Docstring
+    """
+    while True:
+        p, q = get_prime_numbers_p_and_q_from_user()
+        big_n = p * q
+        if big_n > len(SUPPORTED_CHAR):
+            break
+        else:
+            print(f"ERROR: The product of p and q need to be bigger than {len(SUPPORTED_CHAR)}" +
+                    "because of the amount of characters\n." +
+                    "The current product of p and q is {big_n}",
+                end="\n\n",
+            )
+    phi_of_big_n = (p - 1) * (q - 1)
+    return big_n, phi_of_big_n
+
+def get_prime_numbers_p_and_q_from_user():
+    """
+    TODO: Write Docstring
+    """
+    while True:
+            print("Specify a prime number p: ")
+            p = input()
+            if p.isprime():
+                break
+            else:
+                print(f"ERROR: {p} is not prime", end="\n\n")
+    while True:
+        print("Specify anoother prime number q: ")
+        q = input()
+        if q.isprime():
+            break
+        else:
+            print(f"ERROR: {q} is not prime", end="\n\n")
+
+def is_prime():
+    """
+    TODO: Write Docstring
+    """
+    pass
+    
+
+
 if __name__ == "__main__":
     main()
