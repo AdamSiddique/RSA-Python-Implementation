@@ -87,23 +87,29 @@ def get_prime_numbers_p_and_q_from_user():
     while True:
             print("Specify a prime number p: ")
             p = input()
-            if p.isprime():
+            if is_prime(p):
                 break
             else:
                 print(f"ERROR: {p} is not prime", end="\n\n")
     while True:
         print("Specify anoother prime number q: ")
         q = input()
-        if q.isprime():
+        if is_prime(q):
             break
         else:
             print(f"ERROR: {q} is not prime", end="\n\n")
 
-def is_prime():
+def is_prime(num):
     """
     TODO: Write Docstring
     """
-    pass
+    # TODO: Write more efficient prime check
+    if num > 1:
+        for num in range(2, ceil(sqrt(num)) + 1):
+            if num % num == 0:
+                return False
+        return True
+    return False
     
 
 
