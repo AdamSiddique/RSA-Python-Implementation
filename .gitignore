@@ -8,3 +8,6 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
+
+# Python cache files
+__pycache__/
